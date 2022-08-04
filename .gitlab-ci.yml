@@ -29,6 +29,9 @@ workflow:
     - if: $CI_COMMIT_REF_NAME == "feature/2.x/php8"
       variables:
         DEPLOY_TAG: "9.x-php8"
+    - if: $CI_COMMIT_REF_NAME == "feature/2.x-9.4"
+      variables:
+        DEPLOY_TAG: "9.4-edge"
 
     ## Testing
     - if: $CI_COMMIT_REF_NAME == "feature/multiarch-apple-silicon" ## Remove after testing.
